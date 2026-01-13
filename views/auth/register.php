@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
-    <form method="POST" action="/auth/register">
+    <form method="POST" action="../../controllers/AuthController.php?action=register">
         <div class="register-container">
             <h2>Register</h2>
 
