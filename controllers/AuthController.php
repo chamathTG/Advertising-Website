@@ -13,7 +13,7 @@ class AuthController
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            if (empty($username) || empty($email) || empty($password)) {
+            /*if (empty($username) || empty($email) || empty($password)) {
                 die("All fields are required.");
             }
             if (strlen($username) < 5) {
@@ -25,7 +25,7 @@ class AuthController
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 die("Invalid email format.");
             }
-            /*if($this->userModel->findByUsername($username)) {
+            if($this->userModel->findByUsername($username)) {
                 die("Username already exists.");
             }
             if($this->userModel->register($username, $email, $password)) {
@@ -33,6 +33,25 @@ class AuthController
             } else {
                 die("Registration failed.");
             }*/
+                session_start();
+            if (empty($username) || empty($email) || empty($password)) {
+                $_SESSION['error'] = "empty_fields";
+                header("Location: ../views/auth/register.php");
+                exit();
+            }
+                        if (strlen($username) < 5) {
+                die("Username must be at least 5 characters long.");
+            }
+            if (strlen($password) < 8) {
+                die("Password must be at least 8 characters long.");
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                die("Invalid email format.");
+            }
+
+
+
+
             $con = Database::connect();
             $user = new User($username, $email, $password);
             if ($user->save($con)) {
