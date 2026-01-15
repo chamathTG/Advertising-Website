@@ -33,6 +33,9 @@ unset($_SESSION['error']);
 
     <form method="POST" action="../../controllers/AuthController.php?action=login">
         <div class="login-container">
+            <div class="logo" align="center">
+                <img src="..\..\assets\images\BuySelLogo.png" alt="Logo" class="logo-image">
+            </div>
             <h2>Login</h2>
 
             <label for="username">Username:</label>
