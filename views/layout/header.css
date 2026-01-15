@@ -1,0 +1,41 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #f0f0f0;
+}
+.head .logo img {
+    width: 150px;
+    height: auto;
+    align-content: center;
+
+}
+.head .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: sans-serif;
+    text-decoration: solid;
+    text-align: left;
+}
+.head .nav a{
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.head .nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.head .nav a:hover {
+    background-color: #ddd;
+    
+    text-decoration-color: black;
+}
+.head .name a{
+    text-decoration: none;
+    color: black;
+}
