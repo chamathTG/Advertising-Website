@@ -8,7 +8,7 @@ unset($_SESSION['error']);
 
 <head>
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="stylesheet" type="text/css" href="..\..\..\public\assets\css\auth\register.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ unset($_SESSION['error']);
     <form method="POST" action="../../controllers/AuthController.php?action=register">
         <div class="register-container">
             <div class="logo" align="center">
-                <img src="..\..\assets\images\BuySelLogo.png" alt="Logo" class="logo-image">
+                <img src="..\..\..\public\assets\images\BuySelLogo.png" alt="Logo" class="logo-image">
             </div>
             <h2>Register</h2>
 

@@ -1,0 +1,31 @@
+.footer {
+    text-align: center;
+
+    background-color: #f0f0f0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.up-arrow-icon {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    bottom: 50px;
+}
+.scroll-top {
+    text-align: center;
+}
