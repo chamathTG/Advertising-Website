@@ -41,9 +41,7 @@ class User
         $userData = $result->fetch_assoc();
 
         if ($userData && password_verify($inputPassword, $userData['password'])) {
-        echo "Login successful.";    
-        return true;
-            
+            return $userData;
         }
 
         return false;

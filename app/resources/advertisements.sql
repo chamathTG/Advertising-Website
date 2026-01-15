@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2026 at 10:40 AM
+-- Generation Time: Jan 15, 2026 at 06:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,7 @@ CREATE TABLE `advertisements` (
   `user_id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `description` varchar(250) NOT NULL,
+  `price` decimal(65,0) NOT NULL,
   `image_path` varchar(100) NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` date NOT NULL
@@ -41,8 +42,8 @@ CREATE TABLE `advertisements` (
 -- Dumping data for table `advertisements`
 --
 
-INSERT INTO `advertisements` (`id`, `user_id`, `title`, `description`, `image_path`, `status`, `created_at`) VALUES
-(1, 1, 'Rent A Car', '5 Seat toyota Primeo 2020', '/images/1', 0, '2026-01-02');
+INSERT INTO `advertisements` (`id`, `user_id`, `title`, `description`, `price`, `image_path`, `status`, `created_at`) VALUES
+(2, 7, 'BMW car ', 'for sale', 250000, '..\\..\\uploads\\car1.jpg', 1, '2026-01-08');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `advertisements`
 -- AUTO_INCREMENT for table `advertisements`
 --
 ALTER TABLE `advertisements`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

@@ -22,7 +22,10 @@
     margin-left: 20px;
     font-family: sans-serif;
     text-decoration: solid;
-    text-align: left;
+}
+.head .name a{
+    text-decoration: none;
+    color: black;
 }
 .head .nav a{
     color: black;
@@ -40,7 +43,29 @@
     
     text-decoration-color: black;
 }
-.head .name a{
-    text-decoration: none;
+.head .nav span{
     color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.search-bar {
+    margin-right: 20px;
+}
+.search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+}
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #45a049;
 }
