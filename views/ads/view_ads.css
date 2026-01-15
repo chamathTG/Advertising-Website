@@ -1,0 +1,63 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #f0f0f0;
+}
+.head .logo img {
+    width: 150px;
+    height: auto;
+    align-content: center;
+
+}
+.head .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: sans-serif;
+    text-decoration: solid;
+    text-align: left;
+}
+.head .nav a{
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.head .nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.head .nav a:hover {
+    background-color: #ddd;
+    
+    text-decoration-color: black;
+}
+.head .name a{
+    text-decoration: none;
+    color: black;
+}
+.ad-list {
+    margin: 20px;
+}
+.footer {
+    text-align: center;
+
+    background-color: #f0f0f0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
