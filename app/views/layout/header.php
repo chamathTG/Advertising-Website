@@ -2,15 +2,14 @@
 <html>
 
 <head>
-    <title>View Ads</title>
-    <link rel="stylesheet" type="text/css" href="header.css">
+    <title>Header</title>
+    <link rel="stylesheet" type="text/css" href="..\..\..\public\assets\css\layout\header.css">
 </head>
 
 <body>
-
     <div class="head">
         <div class="logo">
-            <a href="..\..\views\ads\view_ads.php"><img src="..\..\assets\images\BuySelLogo.png" alt="Home"
+            <a href="..\..\views\ads\view_ads.php"><img src="..\..\..\public\assets\images\BuySelLogo.png" alt="Home"
                     class="home-icon"></a>
         </div>
         <div class="name">
