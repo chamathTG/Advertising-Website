@@ -32,13 +32,16 @@ unset($_SESSION['error']);
 
     <form method="POST" action="../../controllers/AuthController.php?action=register">
         <div class="register-container">
+            <div class="logo" align="center">
+                <img src="..\..\assets\images\BuySelLogo.png" alt="Logo" class="logo-image">
+            </div>
             <h2>Register</h2>
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
+            <input type="email" id="email" name="email">
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">

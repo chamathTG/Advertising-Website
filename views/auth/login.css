@@ -21,7 +21,11 @@ html, body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+.login-container .logo img {
+    width: 150px;
+    height: auto;
 
+}
 h2 {
     text-align: center;
     margin-bottom: 20px;
