@@ -18,7 +18,6 @@ class AdController
             $description = trim($_POST['description']);
             $price = trim($_POST['price']);
 
-            // Validate inputs
             if (empty($title) || empty($description) || empty($price)) {
                 $_SESSION['error'] = "All fields are required.";
                 header("Location: ../views/ads/create_ad.php");
@@ -37,7 +36,7 @@ class AdController
                 header("Location: ../views/ads/create_ad.php");
                 exit();
             }
-            // Handle image upload
+
             $imagePath = '';
 
 
@@ -51,7 +50,7 @@ class AdController
                 $uniqeName = time() . '_' . $fileName;
                 $targetFile = $uploadDir . $uniqeName;
 
-                // Check if image file is a actual image
+
                 $check = getimagesize($_FILES['image']['tmp_name']);
                 if ($check === false) {
                     $_SESSION['error'] = "File is not an image.";
@@ -59,7 +58,6 @@ class AdController
                     exit();
                 }
 
-                // Move uploaded file
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
                     $imagePath = 'uploads/' . $uniqeName;
                 } else {
@@ -69,7 +67,6 @@ class AdController
                 }
             }
 
-            // Save to database
             $con = Database::connect();
             $ad = new Advertisement($_SESSION['user_id'], $title, $description, $price, $imagePath);
             if ($ad->save($con)) {
