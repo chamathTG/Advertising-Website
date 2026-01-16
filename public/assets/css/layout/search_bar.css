@@ -1,10 +1,16 @@
 .search-bar {
-    margin-right: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+
 }
+
 .search-bar input[type="text"] {
     padding: 5px;
     font-size: 14px;
 }
+
 .search-bar button {
     padding: 5px 10px;
     font-size: 14px;
@@ -14,6 +20,7 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
 .search-bar button:hover {
     background-color: #45a049;
 }
