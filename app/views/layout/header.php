@@ -21,12 +21,7 @@
             </a>
         </div>
 
-        <div class="search-bar">
-            <form method="GET" action="\dse\C-W\Advertising-Website\public\index.php">
-                <input type="text" name="query" placeholder="Search ads...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
+
 
         <div class="nav">
             <?php if (isset($_SESSION['username'])): ?>

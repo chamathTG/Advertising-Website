@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="\dse\C-W\Advertising-Website\public\assets\css\ads\create_ad.css">
     </head>
     <body>
-        <?php session_start(); ?>
+        <!--?php session_start(); ?-->
         <?php include '../layout/header.php'; ?>
 
         <div class="create-ad-container">
