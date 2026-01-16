@@ -24,6 +24,7 @@ class AdController
                 header("Location: ../views/ads/create_ad.php");
                 exit();
             }
+          
 
             if (!is_numeric($price) || $price <= 0) {
                 $_SESSION['error'] = "Price must be a positive number.";
@@ -31,12 +32,24 @@ class AdController
                 exit();
             }
 
+            if(empty($_FILES['image']['name'])) {
+                $_SESSION['error'] = "Please upload an image.";
+                header("Location: ../views/ads/create_ad.php");
+                exit();
+            }
             // Handle image upload
             $imagePath = '';
+
+
             if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-                $uploadDir = '../../../public/uploads/';
+                $uploadDir = __DIR__ . '/../../public/uploads/';
+                //die($uploadDir);
+                if (!is_dir($uploadDir)) {
+                    mkdir($uploadDir, 0755, true);
+                }
                 $fileName = basename($_FILES['image']['name']);
-                $targetFile = $uploadDir . $fileName;
+                $uniqeName = time() . '_' . $fileName;
+                $targetFile = $uploadDir . $uniqeName;
 
                 // Check if image file is a actual image
                 $check = getimagesize($_FILES['image']['tmp_name']);
@@ -48,7 +61,7 @@ class AdController
 
                 // Move uploaded file
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
-                    $imagePath = '/uploads/' . $fileName;
+                    $imagePath = 'uploads/' . $uniqeName;
                 } else {
                     $_SESSION['error'] = "Failed to upload image.";
                     header("Location: ../views/ads/create_ad.php");
@@ -61,7 +74,7 @@ class AdController
             $ad = new Advertisement($_SESSION['user_id'], $title, $description, $price, $imagePath);
             if ($ad->save($con)) {
                 $_SESSION['success'] = "Ad created successfully.";
-                header("Location: ../views/ads/view_ads.php");
+                header("Location: ../views/ads/create_ad.php");
                 exit();
             } else {
                 $_SESSION['error'] = "Failed to create ad.";

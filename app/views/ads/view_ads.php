@@ -9,9 +9,9 @@
 <body>
     <?php
     session_start();
-    require_once '\dse\C-W\Advertising-Website\app\config\database.php';
+    require_once __DIR__ . '..\..\app\config\database.php';
 
-    require_once '\dse\C-W\Advertising-Website\app\models\Advertisement.php';
+    require_once __DIR__ . '..\..\app\models\Advertisement.php';
 
     $con = Database::connect();
     $currentUserId = $_SESSION['user_id'] ?? null;

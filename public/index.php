@@ -13,7 +13,7 @@ define('APPROOT', dirname(__DIR__));
 
 <?php require_once APPROOT . '/app/views/layout/header.php'; ?>
 <?php require_once APPROOT . '/app/views/layout/footer.php'; ?>
-<?php require_once APPROOT . '/app/views/layout/search_bar.php'; ?>
+<!--?php require_once APPROOT . '/app/views/layout/search_bar.php'; ?-->
 
 <div class="content">
     <h2>Content</h2>

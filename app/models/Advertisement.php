@@ -26,7 +26,7 @@ class Advertisement
     public function save($con)
     {
         $stmt = $con->prepare("INSERT INTO advertisements (user_id, title, description, price, image_path, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssis", $this->user_id, $this->title, $this->description, $this->price, $this->image_path, $this->status, $this->created_at);
+        $stmt->bind_param("issssis", $this->user_id, $this->title, $this->description, $this->price, $this->image_path, $this->status, $this->created_at);
         return $stmt->execute();
     }
 
