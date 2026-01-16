@@ -219,3 +219,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,windows,composer,database,venv,node
+
+# Ignore everything inside the uploads folder
+/public/uploads/*
+
+# But keep the folder itself (by keeping this hidden file)
+!/public/uploads/.gitkeep
