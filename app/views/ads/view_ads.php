@@ -7,11 +7,16 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-    require_once __DIR__ . '..\..\app\config\database.php';
 
-    require_once __DIR__ . '..\..\app\models\Advertisement.php';
+    <?php 
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    ?>
+    <?php
+    require_once __DIR__ . '/../../config/database.php';
+
+    require_once __DIR__ . '/../../models/Advertisement.php';
 
     $con = Database::connect();
     $currentUserId = $_SESSION['user_id'] ?? null;
@@ -21,7 +26,7 @@
     }
     ?>
 
-    <?php include '../layout/header.php'; ?>
+    <!--?php include '../layout/header.php'; ?-->
 
     <h2>Other Users' Advertisements</h2>
 
@@ -33,9 +38,9 @@
                 <div class="ad-item">
                     <h3><?php echo htmlspecialchars($ad['title']); ?></h3>
                     <p><?php echo htmlspecialchars($ad['description']); ?></p>
-                    <p><strong>Price:</strong> $<?php echo htmlspecialchars($ad['price']); ?></p>
+                    <p><strong>Price:</strong> Rs:<?php echo htmlspecialchars($ad['price']); ?></p>
                     <?php if (!empty($ad['image_path'])): ?>
-                        <img src="../../../public<?php echo htmlspecialchars($ad['image_path']); ?>" alt="Ad Image" style="max-width: 200px;">
+                        <img src="../../../C-W/Advertising-Website/public/<?php echo htmlspecialchars($ad['image_path']); ?>" alt="Ad Image" style="max-width: 200px;">
                     <?php endif; ?>
                     <p>Posted by: <?php echo htmlspecialchars($ad['username']); ?> on <?php echo htmlspecialchars($ad['created_at']); ?></p>
                 </div>
