@@ -30,6 +30,9 @@
         <div class="nav">
             <?php if (isset($_SESSION['username'])): ?>
                 <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 1): ?>
+                    <a href="\dse\C-W\Advertising-Website\app\views\admin\dashboard.php">Admin Panel</a>
+                <?php endif; ?>
                 <a href="\dse\C-W\Advertising-Website\app\views\ads\create_ad.php">Create Ad</a>
                 <a href="\dse\C-W\Advertising-Website\app\views\auth\logout.php">Logout</a>
             <?php else: ?>

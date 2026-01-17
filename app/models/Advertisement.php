@@ -38,29 +38,29 @@ class Advertisement
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }*/
-public static function getOthersAds($con, $currentUserId, $userRole)
-{
+    public static function getOthersAds($con, $currentUserId, $userRole)
+    {
 
-    $sql = "SELECT a.*, u.username 
+        $sql = "SELECT a.*, u.username 
             FROM advertisements a 
             JOIN users u ON a.user_id = u.id";
 
-    if ($userRole == 1) {
-        $sql .= " WHERE a.status IN (0, 1)";
-        $sql .= " ORDER BY a.created_at DESC";
-        $stmt = $con->prepare($sql);
-        
-    } else {
-        $sql .= " WHERE a.user_id != ? AND a.status = 1";
-        $sql .= " ORDER BY a.created_at DESC";
-        $stmt = $con->prepare($sql);
-        $stmt->bind_param("i", $currentUserId);
-    }
+        if ($userRole == 1) {
+            $sql .= " WHERE a.status IN (0, 1)";
+            $sql .= " ORDER BY a.created_at DESC";
+            $stmt = $con->prepare($sql);
 
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_all(MYSQLI_ASSOC);
-}
+        } else {
+            $sql .= " WHERE a.user_id != ? AND a.status = 1";
+            $sql .= " ORDER BY a.created_at DESC";
+            $stmt = $con->prepare($sql);
+            $stmt->bind_param("i", $currentUserId);
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
     // Getters
     public function getId()
@@ -95,5 +95,38 @@ public static function getOthersAds($con, $currentUserId, $userRole)
     {
         return $this->created_at;
     }
+    public static function countActiveAds($con)
+    {
+        $result = $con->query("SELECT COUNT(*) as count FROM advertisements WHERE status = 1");
+        $row = $result->fetch_assoc();
+        return $row['count'];
+    }
+
+    public static function countAllAds($con)
+    {
+        $result = $con->query("SELECT COUNT(*) as count FROM advertisements");
+        $row = $result->fetch_assoc();
+        return $row['count'];
+    }
+
+    public static function countPendingAds($con)
+    {
+        $result = $con->query("SELECT COUNT(*) as count FROM advertisements WHERE status = 0");
+        $row = $result->fetch_assoc();
+        return $row['count'];
+    }
+
+    public static function getAllAdsForAdmin($con)
+    {
+        $sql = "SELECT a.*, u.username FROM advertisements a JOIN users u ON a.user_id = u.id ORDER BY a.created_at DESC";
+        $result = $con->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public static function updateStatus($con, $id, $status)
+    {
+        $stmt = $con->prepare("UPDATE advertisements SET status = ? WHERE id = ?");
+        $stmt->bind_param("ii", $status, $id);
+        return $stmt->execute();
+    }
 }
-?>

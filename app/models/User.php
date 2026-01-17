@@ -63,6 +63,27 @@ class User
         return $this->password;
     }
 
+    public static function getAllUsers($con)
+    {
+        $stmt = $con->prepare("SELECT id, username, email, role, status FROM users ORDER BY id DESC");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public static function updateStatus($con, $id, $status)
+    {
+        $stmt = $con->prepare("UPDATE users SET status = ? WHERE id = ?");
+        $stmt->bind_param("si", $status, $id);
+        return $stmt->execute();
+    }
+
+    public static function countUsers($con)
+    {
+        $result = $con->query("SELECT COUNT(*) as count FROM users WHERE role = 0");
+        $row = $result->fetch_assoc();
+        return $row['count'];
+    }
 }
 
 ?>
