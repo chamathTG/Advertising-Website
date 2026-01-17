@@ -1,13 +1,14 @@
-form{
+form {
     margin-top: 20px;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
 
 }
-.create-ad-container{
+
+.create-ad-container {
     position: relative;
-     width: 100%;
+    width: 100%;
     max-width: 600px;
     margin: 80px auto;
     padding: 30px 25px;
@@ -16,16 +17,19 @@ form{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
+
 label {
     display: block;
     margin-top: 10px;
     color: #333;
 }
+
 input[type="text"],
 input[type="number"],
 input[type="file"],
@@ -36,6 +40,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 button {
     width: 100%;
     margin-top: 12px;
@@ -47,6 +52,7 @@ button {
     cursor: pointer;
     font-size: 15px;
 }
+
 button:hover {
     opacity: 0.85;
 }
@@ -62,49 +68,11 @@ button:hover {
     line-height: 1;
     cursor: pointer;
 }
+
 .close-btn:hover {
     color: red;
 }
+
 button[type="reset"] {
     background-color: #9e9e9e;
-}
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-.popup-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    width: 80%;
-    max-width: 400px;
-}
-.popup-content .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 25px;
-    color: #333;
-}
-.popup-content .home-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-.popup-content .home-link:hover {
-    background-color: #45a049;
 }

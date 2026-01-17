@@ -111,6 +111,10 @@ class AuthController
                 $_SESSION['username'] = $userData['username'];
                 $_SESSION['user_role'] = $userData['role'];
                 //echo "Login successful.";
+                if (session_status() == PHP_SESSION_NONE) {
+                    session_start();
+                }
+                $_SESSION['success'] = "Login successful.";
                 header("Location: \dse\C-W\Advertising-Website\public\index.php");
                 exit();
             } else {

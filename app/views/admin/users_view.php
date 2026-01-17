@@ -15,7 +15,7 @@
         <a href="users.php" style="color: white; font-weight: bold;">Manage Users</a>
         <a href="reports.php">Reports</a>
         <a href="/dse/C-W/Advertising-Website/public/index.php">Back to Site</a>
-        <a href="/dse/C-W/Advertising-Website/app/views/auth/logout.php">Logout</a>
+        <a href="javascript:void(0)" onclick="confirmLogout()">Logout</a>
     </div>
 
     <div class="main-content">
@@ -76,6 +76,9 @@
             </tbody>
         </table>
     </div>
+
+    <?php include __DIR__ . '/../../layout/popup_alert.php'; ?>
+
 
 </body>
 

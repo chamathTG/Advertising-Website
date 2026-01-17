@@ -28,7 +28,7 @@
                 <?php endif; ?>
 
                 <a href="/dse/C-W/Advertising-Website/app/views/ads/create_ad.php" class="btn-cta">Create Ad</a>
-                <a href="/dse/C-W/Advertising-Website/app/views/auth/logout.php">Logout</a>
+                <a href="javascript:void(0)" onclick="confirmLogout()">Logout</a>
             <?php else: ?>
                 <a href="/dse/C-W/Advertising-Website/app/views/auth/login.php">Login</a>
                 <a href="/dse/C-W/Advertising-Website/app/views/auth/register.php" class="btn-cta">Register</a>

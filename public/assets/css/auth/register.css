@@ -1,17 +1,18 @@
-
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: #f2f2f2;
 }
-.register-container{
-     width: 100%;
+
+.register-container {
+    width: 100%;
     max-width: 400px;
     margin: 80px auto;
     padding: 30px 25px;
@@ -20,6 +21,7 @@ html, body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 .register-container .logo img {
     width: 150px;
     height: auto;
@@ -39,7 +41,7 @@ label {
 }
 
 input[type="text"],
-input[type="password"] ,
+input[type="password"],
 input[type="email"] {
     width: 100%;
     padding: 12px 15px;
@@ -70,42 +72,4 @@ button[type="reset"] {
 
 button[type="button"] {
     background-color: #2196F3;
-}
-#popupOverlay {
-    position: fixed;
-    inset: 0; 
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-
-#popupBox {
-    background: #fff;
-    width: 320px;
-    padding: 25px 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    animation: popupFade 0.3s ease-in-out;
-}
-
-#popupBox h3 {
-    margin-top: 0;
-    color: #d32f2f;
-}
-
-#popupBox p {
-    margin: 15px 0;
-    color: #555;
-}
-
-#popupBox button {
-    width: auto;
-    padding: 10px 25px;
-    background-color: #d32f2f;
-    border-radius: 5px;
-    font-size: 14px;
 }

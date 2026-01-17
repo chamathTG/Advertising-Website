@@ -1,7 +1,7 @@
 <?php
-session_start();
-$error = $_SESSION['error'] ?? null;
-unset($_SESSION['error']);
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,28 +13,14 @@ unset($_SESSION['error']);
 </head>
 
 <body>
-    <?php if ($error): ?>
-        <div id="popupOverlay">
-            <div id="popupBox">
 
-                <?php if ($error === "invalid_credentials"): ?>
-                    <h3>Login Failed</h3>
-                    <p>Invalid username or password.</p>
-                <?php elseif ($error === "empty_fields"): ?>
-                    <h3>Missing Information</h3>
-                    <p>Please fill in all fields.</p>
-                <?php endif; ?>
-
-                <button onclick="closePopup()">OK</button>
-            </div>
-        </div>
-    <?php endif; ?>
 
 
     <form method="POST" action="\dse\C-W\Advertising-Website\app\controllers\AuthController.php?action=login">
         <div class="login-container">
             <div class="logo" align="center">
-                <img src="\dse\C-W\Advertising-Website\public\assets\images\BuySelLogo.png" alt="Logo" class="logo-image">
+                <img src="\dse\C-W\Advertising-Website\public\assets\images\BuySelLogo.png" alt="Logo"
+                    class="logo-image">
             </div>
             <h2>Login</h2>
 
@@ -52,13 +38,8 @@ unset($_SESSION['error']);
     </form>
 
 
-    <script>
-        function closePopup() {
-            document.getElementById("popupOverlay").style.display = "none";
-        }
-    </script>
 
-
+    <?php include __DIR__ . '/../layout/popup_alert.php'; ?>
 </body>
 
 </html>
