@@ -3,7 +3,7 @@
 
 <head>
     <title>Header</title>
-    <link rel="stylesheet" type="text/css" href="\dse\C-W\Advertising-Website\public\assets\css\layout\header.css">
+    <link rel="stylesheet" type="text/css" href="/dse/C-W/Advertising-Website/public/assets/css/layout/header.css">
 </head>
 
 <body>
@@ -13,35 +13,27 @@
     }
     ?>
     <div class="head">
-        <div class="logo">
-            <a href="\dse\C-W\Advertising-Website\public\index.php"><img
-                    src="\dse\C-W\Advertising-Website\public\assets\images\BuySelLogo.png" alt="Home"
-                    class="home-icon"></a>
-
-        </div>
-        <div class="name">
-            <a href="\dse\C-W\Advertising-Website\public\index.php">
-                <h1>BuySel.lk</h1>
-            </a>
-        </div>
-
-
+        <a href="/dse/C-W/Advertising-Website/public/index.php" class="logo-section">
+            <img src="/dse/C-W/Advertising-Website/public/assets/images/BuySelLogo.png" alt="BuySel.lk"
+                class="home-icon">
+            <h1 class="brand-name">BuySel.lk</h1>
+        </a>
 
         <div class="nav">
             <?php if (isset($_SESSION['username'])): ?>
-                <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                <span>Hi, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+
                 <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] == 1): ?>
-                    <a href="\dse\C-W\Advertising-Website\app\views\admin\dashboard.php">Admin Panel</a>
+                    <a href="/dse/C-W/Advertising-Website/app/views/admin/dashboard.php" class="btn-admin">Admin Panel</a>
                 <?php endif; ?>
-                <a href="\dse\C-W\Advertising-Website\app\views\ads\create_ad.php">Create Ad</a>
-                <a href="\dse\C-W\Advertising-Website\app\views\auth\logout.php">Logout</a>
+
+                <a href="/dse/C-W/Advertising-Website/app/views/ads/create_ad.php" class="btn-cta">Create Ad</a>
+                <a href="/dse/C-W/Advertising-Website/app/views/auth/logout.php">Logout</a>
             <?php else: ?>
-                <a href="\dse\C-W\Advertising-Website\app\views\auth\login.php">Login</a>
+                <a href="/dse/C-W/Advertising-Website/app/views/auth/login.php">Login</a>
+                <a href="/dse/C-W/Advertising-Website/app/views/auth/register.php" class="btn-cta">Register</a>
             <?php endif; ?>
         </div>
-
-
-
     </div>
 </body>
 

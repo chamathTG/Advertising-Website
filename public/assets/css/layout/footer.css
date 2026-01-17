@@ -1,31 +1,69 @@
 .footer {
-    text-align: center;
+    background: #1e293b;
+    color: #cbd5e1;
+    padding: 60px 40px 20px;
+    font-family: 'Inter', sans-serif;
+    margin-top: auto;
 
-    background-color: #f0f0f0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
-.scroll-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    display: none;
-    background-color: #333;
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-top:hover {
+    opacity: 1;
 }
 
 .up-arrow-icon {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    bottom: 0;
-    bottom: 50px;
-}
-.scroll-top {
-    text-align: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

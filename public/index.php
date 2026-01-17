@@ -16,13 +16,14 @@ define('APPROOT', dirname(__DIR__));
 <body>
 
     <?php require_once APPROOT . '/app/views/layout/header.php'; ?>
+    <?php require_once APPROOT . '/app/views/home/home.php'; ?>
     <?php require_once APPROOT . '/app/views/layout/footer.php'; ?>
     <!--?php require_once APPROOT . '/app/views/layout/search_bar.php'; ?-->
 
 
 
 
-    <?php require_once APPROOT . '/app/views/home/home.php'; ?>
+
 
 
 
