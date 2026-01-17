@@ -23,6 +23,15 @@ unset($_SESSION['error']);
                 <?php elseif ($error === "empty_fields"): ?>
                     <h3>Missing Information</h3>
                     <p>Please fill in all fields.</p>
+                <?php elseif ($error === "username_too_short"): ?>
+                    <h3>Username Too Short</h3>
+                    <p>Username must be at least 5 characters long.</p>
+                <?php elseif ($error === "password_too_short"): ?>
+                    <h3>Password Too Short</h3>
+                    <p>Password must be at least 8 characters long.</p>
+                <?php elseif ($error === "invalid_email"): ?>
+                    <h3>Invalid Email</h3>
+                    <p>Invalid email format.</p>
                 <?php endif; ?>
 
                 <button onclick="closePopup()">OK</button>
