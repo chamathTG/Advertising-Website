@@ -95,6 +95,15 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`
 --
 -- Indexes for dumped tables
 --
+CREATE TABLE comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ad_id INT NOT NULL,
+    user_id INT NOT NULL,
+    comment TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ad_id) REFERENCES advertisements(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
 
 --
 -- Indexes for table `advertisements`

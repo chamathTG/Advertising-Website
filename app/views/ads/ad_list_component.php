@@ -31,7 +31,9 @@ if ($currentUserId) {
         <?php foreach ($ads as $ad): ?>
             <div class="ad-item">
                 <h3>
-                    <?php echo htmlspecialchars($ad['title']); ?>
+                    <a href="/dse/C-W/Advertising-Website/app/views/ads/view_ad.php?id=<?php echo $ad['id']; ?>" style="text-decoration: none; color: inherit;">
+                        <?php echo htmlspecialchars($ad['title']); ?>
+                    </a>
                 </h3>
                 <p>
                     <?php echo htmlspecialchars($ad['description']); ?>
@@ -40,8 +42,10 @@ if ($currentUserId) {
                     <?php echo htmlspecialchars($ad['price']); ?>
                 </p>
                 <?php if (!empty($ad['image_path'])): ?>
-                    <img src="/dse/C-W/Advertising-Website/public/<?php echo htmlspecialchars($ad['image_path']); ?>"
-                        alt="Ad Image">
+                    <a href="/dse/C-W/Advertising-Website/app/views/ads/view_ad.php?id=<?php echo $ad['id']; ?>">
+                        <img src="/dse/C-W/Advertising-Website/public/<?php echo htmlspecialchars($ad['image_path']); ?>"
+                            alt="Ad Image">
+                    </a>
                 <?php endif; ?>
                 <p>Posted by:
                     <?php echo htmlspecialchars($ad['username']); ?> on

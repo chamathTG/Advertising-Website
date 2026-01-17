@@ -129,4 +129,36 @@ class Advertisement
         $stmt->bind_param("ii", $status, $id);
         return $stmt->execute();
     }
+
+    public static function getAdById($con, $id)
+    {
+        $stmt = $con->prepare("SELECT a.*, u.username FROM advertisements a JOIN users u ON a.user_id = u.id WHERE a.id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_assoc();
+    }
+
+    public static function addComment($con, $adId, $userId, $comment)
+    {
+        $stmt = $con->prepare("INSERT INTO comments (ad_id, user_id, comment) VALUES (?, ?, ?)");
+        $stmt->bind_param("iis", $adId, $userId, $comment);
+        return $stmt->execute();
+    }
+
+    public static function getComments($con, $adId)
+    {
+        $stmt = $con->prepare("SELECT c.*, u.username FROM comments c JOIN users u ON c.user_id = u.id WHERE c.ad_id = ? ORDER BY c.created_at DESC");
+        $stmt->bind_param("i", $adId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public static function reportAd($con, $adId, $userId, $reason)
+    {
+        $stmt = $con->prepare("INSERT INTO reports (ad_id, user_id, reason) VALUES (?, ?, ?)");
+        $stmt->bind_param("iis", $adId, $userId, $reason);
+        return $stmt->execute();
+    }
 }
