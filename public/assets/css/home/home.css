@@ -1,11 +1,13 @@
-:root {
+:root
+{
     --primary-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
     --surface-glass: rgba(255, 255, 255, 0.9);
     --text-dark: #1e293b;
     --text-light: #f8fafc;
 }
 
-.hero-section {
+.hero-section
+{
     background: var(--primary-gradient);
     padding: 15px 20px 15px;
     text-align: center;
@@ -15,14 +17,16 @@
     margin-bottom: 20px;
 }
 
-.hero-content {
+.hero-content
+{
     max-width: 800px;
     margin: 0 auto;
     position: relative;
     z-index: 10;
 }
 
-.hero-title {
+.hero-title
+{
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 24px;
@@ -31,7 +35,8 @@
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.hero-subtitle {
+.hero-subtitle
+{
     font-size: 1.25rem;
     margin-bottom: 40px;
     opacity: 0.9;
@@ -41,7 +46,8 @@
     margin-right: auto;
 }
 
-.hero-search-container {
+.hero-search-container
+{
     background: var(--surface-glass);
     padding: 8px;
     border-radius: 50px;
@@ -52,7 +58,8 @@
     backdrop-filter: blur(10px);
 }
 
-.hero-search-input {
+.hero-search-input
+{
     flex: 1;
     border: none;
     background: transparent;
@@ -62,7 +69,8 @@
     outline: none;
 }
 
-.hero-search-btn {
+.hero-search-btn
+{
     background: #0f172a;
     color: white;
     border: none;
@@ -73,12 +81,14 @@
     transition: transform 0.2s ease, background-color 0.2s;
 }
 
-.hero-search-btn:hover {
+.hero-search-btn:hover 
+{
     transform: translateY(-1px);
     background: #1e293b;
 }
 
-.section-title {
+.section-title
+{
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
@@ -86,8 +96,8 @@
     margin-bottom: 40px;
 }
 
-/* Background decorations */
-.hero-blob {
+.hero-blob
+{
     position: absolute;
     width: 300px;
     height: 300px;
@@ -96,35 +106,42 @@
     filter: blur(40px);
 }
 
-.blob-1 {
+.blob-1
+{
     top: -50px;
     left: -50px;
 }
 
-.blob-2 {
+.blob-2
+{
     bottom: -50px;
     right: -50px;
 }
 
-@media (max-width: 640px) {
-    .hero-title {
+@media (max-width: 640px)
+{
+    .hero-title 
+    {
         font-size: 2.5rem;
     }
 
-    .hero-search-container {
+    .hero-search-container
+    {
         flex-direction: column;
         background: transparent;
         box-shadow: none;
     }
 
-    .hero-search-input {
+    .hero-search-input
+    {
         background: white;
         border-radius: 12px;
         margin-bottom: 12px;
         width: 100%;
     }
 
-    .hero-search-btn {
+    .hero-search-btn
+    {
         width: 100%;
         border-radius: 12px;
         padding: 16px;

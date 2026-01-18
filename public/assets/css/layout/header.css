@@ -1,15 +1,18 @@
-* {
+*
+{
     box-sizing: border-box;
 }
 
-body {
+body
+{
     margin: 0;
     padding-top: 80px;
 
     font-family: 'Inter', sans-serif;
 }
 
-.head {
+.head
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -26,19 +29,22 @@ body {
     transition: all 0.3s ease;
 }
 
-.logo-section {
+.logo-section
+{
     display: flex;
     align-items: center;
     gap: 12px;
     text-decoration: none;
 }
 
-.home-icon {
+.home-icon
+{
     height: 40px;
     width: auto;
 }
 
-.brand-name {
+.brand-name
+{
     font-size: 1.5rem;
     font-weight: 800;
     color: #1e293b;
@@ -47,19 +53,22 @@ body {
 }
 
 
-.nav {
+.nav
+{
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.nav span {
+.nav span
+{
     font-size: 0.95rem;
     color: #64748b;
     font-weight: 500;
 }
 
-.nav a {
+.nav a
+{
     text-decoration: none;
     color: #334155;
     font-weight: 600;
@@ -67,12 +76,14 @@ body {
     transition: color 0.2s;
 }
 
-.nav a:hover {
+.nav a:hover
+{
     color: #2563eb;
 }
 
 
-.nav a.btn-cta {
+.nav a.btn-cta
+{
     background: #2563eb;
     color: white;
     padding: 8px 20px;
@@ -80,34 +91,42 @@ body {
     transition: background 0.2s;
 }
 
-.nav a.btn-cta:hover {
+.nav a.btn-cta:hover
+{
     background: #1d4ed8;
     color: white;
 }
 
-.nav a.btn-admin {
+.nav a.btn-admin
+{
     color: #ef4444;
 }
 
-.nav a.btn-admin:hover {
+.nav a.btn-admin:hover
+{
     color: #dc2626;
 }
 
 
-@media (max-width: 768px) {
-    .head {
+@media (max-width: 768px)
+{
+    .head
+    {
         padding: 0 20px;
     }
 
-    .brand-name {
+    .brand-name
+    {
         display: none;
     }
 
-    .nav {
+    .nav
+    {
         gap: 15px;
     }
 
-    .nav span {
+    .nav span
+    {
         display: none;
     }
 }

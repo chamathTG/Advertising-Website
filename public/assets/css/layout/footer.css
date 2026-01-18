@@ -1,4 +1,5 @@
-.footer {
+.footer
+{
     background: #1e293b;
     color: #cbd5e1;
     padding: 60px 40px 20px;
@@ -7,7 +8,8 @@
 
 }
 
-.footer-content {
+.footer-content
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
@@ -16,15 +18,16 @@
     margin-bottom: 40px;
 }
 
-.footer-section h3 {
+.footer-section h3
+{
     color: white;
     font-size: 1.1rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.footer-section p,
-.footer-section a {
+.footer-section p, .footer-section a
+{
     font-size: 0.95rem;
     line-height: 1.6;
     color: #cbd5e1;
@@ -34,11 +37,13 @@
     transition: color 0.2s;
 }
 
-.footer-section a:hover {
+.footer-section a:hover
+{
     color: white;
 }
 
-.footer-bottom {
+.footer-bottom
+{
     border-top: 1px solid #334155;
     padding-top: 20px;
     text-align: center;
@@ -46,7 +51,8 @@
     color: #64748b;
 }
 
-.scroll-top {
+.scroll-top
+{
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -55,11 +61,13 @@
     transition: opacity 0.3s;
 }
 
-.scroll-top:hover {
+.scroll-top:hover
+{
     opacity: 1;
 }
 
-.up-arrow-icon {
+.up-arrow-icon
+{
     width: 40px;
     height: 40px;
     background: white;
