@@ -22,13 +22,13 @@ $ads = Advertisement::getOthersAds($con, $currentUserId, $userRole, $searchQuery
     <?php if ($searchQuery): ?>
         <p>Search results for "<strong><?php echo htmlspecialchars($searchQuery); ?></strong>":</p>
     <?php else: ?>
-        <p>Welcome to BuySel.lk! Browse and find amazing deals on a variety of products.</p>
+        <p>Welcome to BuySell.lk! Browse and find amazing deals on a variety of products.</p>
     <?php endif; ?>
 </div>
 
 <div class="ad-list">
     <?php if (empty($ads)): ?>
-        <p>No advertisements available (Log in to see tailored ads).</p>
+        <p>No advertisements available .</p>
     <?php else: ?>
         <?php foreach ($ads as $ad): ?>
             <div class="ad-item">

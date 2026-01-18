@@ -41,7 +41,7 @@ class AuthController
                 header("Location: ../views/auth/register.php");
                 exit();
             }
-            if (strlen($username) < 5) {
+            if (strlen($username) < 4) {
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
@@ -49,7 +49,7 @@ class AuthController
                 header("Location: ../views/auth/register.php");
                 exit();
             }
-            if (strlen($password) < 8) {
+            if (strlen($password) < 4) {
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }

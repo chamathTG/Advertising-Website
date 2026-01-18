@@ -9,7 +9,7 @@ define('APPROOT', dirname(__DIR__));
 
 <head>
 
-    <title>BuySel.lk</title>
+    <title>BuySell.lk</title>
     <link rel="stylesheet" type="text/css" href="/dse/C-W/Advertising-Website/public/assets/css/home/home.css">
     <link rel="stylesheet" type="text/css" href="/dse/C-W/Advertising-Website/public/assets/css/ads/view_ads.css">
 

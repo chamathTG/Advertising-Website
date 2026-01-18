@@ -30,7 +30,7 @@ class AdInteractionController
             if (!empty($comment)) {
                 Advertisement::addComment($this->con, $adId, $userId, $comment);
             }
-            // Redirect back to ad view
+
             header("Location: /dse/C-W/Advertising-Website/app/views/ads/view_ad.php?id=" . $adId);
             exit;
         }

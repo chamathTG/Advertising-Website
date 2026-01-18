@@ -16,7 +16,7 @@
         <a href="/dse/C-W/Advertising-Website/public/index.php" class="logo-section">
             <img src="/dse/C-W/Advertising-Website/public/assets/images/BuySelLogo.png" alt="BuySel.lk"
                 class="home-icon">
-            <h1 class="brand-name">BuySel.lk</h1>
+            <h1 class="brand-name">BuySell.lk</h1>
         </a>
 
         <div class="nav">

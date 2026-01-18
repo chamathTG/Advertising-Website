@@ -15,7 +15,6 @@ class AdminController
     public function __construct()
     {
         $this->con = Database::connect();
-        // checking current user is really an admin?
         if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 1) {
             header("Location: /dse/C-W/Advertising-Website/public/index.php");
             exit;
@@ -29,7 +28,7 @@ class AdminController
         $totalAds = Advertisement::countAllAds($this->con);
         $pendingAds = Advertisement::countPendingAds($this->con);
 
-        // pending reports
+
         $reportResult = $this->con->query("SELECT COUNT(*) as count FROM reports WHERE status = 'pending'");
         $reportCount = $reportResult ? $reportResult->fetch_assoc()['count'] : 0;
 

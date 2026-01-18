@@ -27,7 +27,7 @@ $comments = Advertisement::getComments($con, $adId);
 
 <head>
     <title>
-        <?php echo htmlspecialchars($ad['title']); ?> - BuySel.lk
+        <?php echo htmlspecialchars($ad['title']); ?> - BuySell.lk
     </title>
     <link rel="stylesheet" href="/dse/C-W/Advertising-Website/public/assets/css/ads/view_ad.css">
 </head>

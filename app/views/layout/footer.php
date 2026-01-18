@@ -15,7 +15,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>BuySel.lk</h3>
+                <h3>BuySell.lk</h3>
                 <p>The best marketplace to buy and sell anything in Sri Lanka. Connect with thousands of buyers and
                     sellers today.</p>
             </div>
@@ -28,14 +28,14 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: support@buysel.lk</p>
+                <p>Email: support@buysell.lk</p>
                 <p>Phone: +94 11 234 5678</p>
                 <p>Address: No 32, Galle Road, Colombo, Sri Lanka</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy;
-                <?php echo date('Y'); ?> BuySel.lk. All rights reserved.
+                <?php echo date('Y'); ?> BuySell.lk. All rights reserved.
             </p>
         </div>
     </footer>
