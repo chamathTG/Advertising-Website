@@ -22,9 +22,9 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <a href="/dse/C-W/Advertising-Website/public/index.php">Home</a>
-                <a href="#">About Us</a>
+                <!--a href="#">About Us</a>
                 <a href="#">Contact Support</a>
-                <a href="#">Privacy Policy</a>
+                <a href="#">Privacy Policy</a-->
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>

@@ -77,7 +77,7 @@
         </table>
     </div>
 
-    <?php include __DIR__ . '/../../layout/popup_alert.php'; ?>
+    <?php include __DIR__ . '/../layout/popup_alert.php'; ?>
 </body>
 
 </html>
