@@ -40,6 +40,7 @@
         </div>
     </footer>
 
+    <?php include __DIR__ . '/popup_alert.php'; ?>
 </body>
 
 </html>

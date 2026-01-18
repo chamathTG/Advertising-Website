@@ -125,28 +125,9 @@ $comments = Advertisement::getComments($con, $adId);
     <?php include __DIR__ . '/../layout/footer.php'; ?>
 
     <script>
-        var modal = document.getElementById("reportModal");
-        var btn = document.getElementById("reportBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function () {
-            <?php if (!isset($_SESSION['user_id'])): ?>
-                window.location.href = "/dse/C-W/Advertising-Website/app/views/auth/login.php";
-            <?php else: ?>
-                modal.style.display = "block";
-            <?php endif; ?>
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        window.isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
     </script>
+    <script src="/dse/C-W/Advertising-Website/public/assets/js/report_modal.js"></script>
 
 </body>
 
