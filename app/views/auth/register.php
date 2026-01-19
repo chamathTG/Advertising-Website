@@ -29,6 +29,9 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
 
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+
             <button type="submit">Register</button>
             <button type="button" onclick="window.location.href='login.php'">Login</button>
             <button type="reset">Clear</button>

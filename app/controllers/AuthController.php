@@ -12,6 +12,16 @@ class AuthController
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $confirm_password = $_POST['confirm_password'];
+
+            if ($password !== $confirm_password) {
+                if (session_status() == PHP_SESSION_NONE) {
+                    session_start();
+                }
+                $_SESSION['error'] = "passwords_do_not_match";
+                header("Location: ../views/auth/register.php");
+                exit();
+            }
 
             /*if (empty($username) || empty($email) || empty($password)) {
                 die("All fields are required.");
@@ -41,7 +51,7 @@ class AuthController
                 header("Location: ../views/auth/register.php");
                 exit();
             }
-            if (strlen($username) < 4) {
+            if (strlen($username) < 5) {
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
@@ -49,7 +59,7 @@ class AuthController
                 header("Location: ../views/auth/register.php");
                 exit();
             }
-            if (strlen($password) < 4) {
+            if (strlen($password) < 8) {
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
@@ -140,9 +150,6 @@ class AuthController
         header("Location: ../views/auth/login.php");
         exit();
     }
-
-
-
 
 }
 $controller = new AuthController();

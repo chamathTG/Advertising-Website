@@ -48,7 +48,7 @@ class Advertisement
         $types = "";
         $whereClauses = [];
 
-        // Role restriction
+
         if ($userRole == 1) {
             $whereClauses[] = "a.status IN (0, 1)";
         } else {
@@ -58,7 +58,6 @@ class Advertisement
             $types .= "i";
         }
 
-        // Search filter
         if ($searchQuery) {
             $whereClauses[] = "(a.title LIKE ? OR u.username LIKE ?)";
             $searchTerm = "%" . $searchQuery . "%";
@@ -83,7 +82,7 @@ class Advertisement
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    // Getters
+
     public function getId()
     {
         return $this->id;
