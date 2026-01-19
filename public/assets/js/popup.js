@@ -1,20 +1,29 @@
-function closePopup() {
+function closePopup()
+{
     const popup = document.getElementById('sucessModel');
-    if (popup) {
+
+    if (popup)
+    {
         popup.style.display = 'none';
     }
 }
 
-function showPopup(message) {
+function showPopup(message)
+{
     const popup = document.getElementById('sucessModel');
-    if (popup) {
+
+    if (popup)
+    {
         popup.style.display = 'flex';
         const messageBox = popup.querySelector('p');
-        if (messageBox && message) {
+
+        if (messageBox && message)
+        {
             messageBox.textContent = message;
         }
     }
-    else {
+    else
+    {
         console.error('Popup element not found');
     }
 }

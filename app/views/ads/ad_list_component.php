@@ -22,7 +22,7 @@ $ads = Advertisement::getOthersAds($con, $currentUserId, $userRole, $searchQuery
     <?php if ($searchQuery): ?>
         <p>Search results for "<strong><?php echo htmlspecialchars($searchQuery); ?></strong>":</p>
     <?php else: ?>
-        <p>Welcome to BuySel.lk! Browse and find amazing deals on a variety of products.</p>
+        <p>Welcome! to BuySell.lk<br>Browse and find amazing deals on a variety of products</p>
     <?php endif; ?>
 </div>
 
